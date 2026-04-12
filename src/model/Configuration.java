@@ -39,4 +39,9 @@ public class Configuration {
     public void setVersions(List<ConfigurationVersion> versions) {
         this.versions = versions;
     }
+
+    @Override
+    public String toString() {
+        return "Configuration: " + name + " Versions: " + versions;
+    }
 }
