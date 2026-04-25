@@ -1,9 +1,9 @@
-import exception.ConfigurationNotFoundException;
-import model.Configuration;
-import model.ConfigurationVersion;
-import repository.ConfigurationRepository;
-import repository.InMemoryConfigurationRepository;
-import service.ConfigurationService;
+package main.java;
+
+import main.java.exception.ConfigurationNotFoundException;
+import main.java.model.Configuration;
+import main.java.model.ConfigurationVersion;
+import main.java.service.ConfigurationService;
 
 public class Main {
     public static void main(String[] args)  {

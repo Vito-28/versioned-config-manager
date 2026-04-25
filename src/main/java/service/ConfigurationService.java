@@ -1,10 +1,10 @@
-package service;
+package main.java.service;
 
-import exception.ConfigurationNotFoundException;
-import model.Configuration;
-import model.ConfigurationVersion;
-import repository.ConfigurationRepository;
-import repository.InMemoryConfigurationRepository;
+import main.java.exception.ConfigurationNotFoundException;
+import main.java.model.Configuration;
+import main.java.model.ConfigurationVersion;
+import main.java.repository.ConfigurationRepository;
+import main.java.repository.InMemoryConfigurationRepository;
 
 import java.util.List;
 

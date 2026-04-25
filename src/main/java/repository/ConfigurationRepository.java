@@ -1,6 +1,6 @@
-package repository;
+package main.java.repository;
 
-import model.Configuration;
+import main.java.model.Configuration;
 
 public interface ConfigurationRepository {
     public void save(Configuration config);
