@@ -1,10 +1,11 @@
-package main.java.service;
+package com.vitochianese.configmanager.service;
 
-import main.java.exception.ConfigurationNotFoundException;
-import main.java.model.Configuration;
-import main.java.model.ConfigurationVersion;
-import main.java.repository.ConfigurationRepository;
-import main.java.repository.InMemoryConfigurationRepository;
+import com.vitochianese.configmanager.exception.ConfigurationNotFoundException;
+import com.vitochianese.configmanager.model.Configuration;
+import com.vitochianese.configmanager.model.ConfigurationVersion;
+import com.vitochianese.configmanager.repository.ConfigurationRepository;
+import com.vitochianese.configmanager.repository.InMemoryConfigurationRepository;
+
 
 import java.util.List;
 

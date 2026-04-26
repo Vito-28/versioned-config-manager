@@ -1,4 +1,4 @@
-package main.java.exception;
+package com.vitochianese.configmanager.exception;
 
 public class ConfigurationNotFoundException extends Exception{
 

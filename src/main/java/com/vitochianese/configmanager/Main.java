@@ -1,9 +1,10 @@
-package main.java;
+package com.vitochianese.configmanager;
 
-import main.java.exception.ConfigurationNotFoundException;
-import main.java.model.Configuration;
-import main.java.model.ConfigurationVersion;
-import main.java.service.ConfigurationService;
+
+import com.vitochianese.configmanager.exception.ConfigurationNotFoundException;
+import com.vitochianese.configmanager.model.Configuration;
+import com.vitochianese.configmanager.model.ConfigurationVersion;
+import com.vitochianese.configmanager.service.ConfigurationService;
 
 public class Main {
     public static void main(String[] args)  {

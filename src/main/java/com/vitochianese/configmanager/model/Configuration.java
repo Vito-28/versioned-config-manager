@@ -1,4 +1,4 @@
-package main.java.model;
+package com.vitochianese.configmanager.model;
 
 import java.util.ArrayList;
 import java.util.List;

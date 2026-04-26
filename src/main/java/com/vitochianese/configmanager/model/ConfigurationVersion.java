@@ -1,4 +1,4 @@
-package main.java.model;
+package com.vitochianese.configmanager.model;
 
 public class ConfigurationVersion {
     private Integer versionNumber;

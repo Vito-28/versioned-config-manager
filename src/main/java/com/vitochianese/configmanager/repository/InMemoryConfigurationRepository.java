@@ -1,7 +1,6 @@
-package main.java.repository;
+package com.vitochianese.configmanager.repository;
 
-import main.java.model.Configuration;
-import main.java.repository.ConfigurationRepository;
+import com.vitochianese.configmanager.model.Configuration;
 
 import java.util.HashMap;
 import java.util.Map;

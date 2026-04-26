@@ -1,6 +1,7 @@
-package main.java.repository;
+package com.vitochianese.configmanager.repository;
 
-import main.java.model.Configuration;
+
+import com.vitochianese.configmanager.model.Configuration;
 
 public interface ConfigurationRepository {
     public void save(Configuration config);
