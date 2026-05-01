@@ -12,7 +12,7 @@ public class Configuration {
 
     public Configuration(String name, List<ConfigurationVersion> versions) {
         this.name = name;
-        this.versions = new ArrayList<>();
+        this.versions = versions;
     }
 
     public Configuration(String name) {
