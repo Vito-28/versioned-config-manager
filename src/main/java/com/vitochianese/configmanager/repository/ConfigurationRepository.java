@@ -8,5 +8,5 @@ import java.util.List;
 public interface ConfigurationRepository {
     public void save(Configuration config);
     public Configuration findByName(String name);
-    public List<Configuration> findAllConfiguration();
+    public List<Configuration> findAllConfigurations();
 }
