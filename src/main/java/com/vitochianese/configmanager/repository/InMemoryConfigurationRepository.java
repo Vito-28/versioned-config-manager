@@ -3,6 +3,7 @@ package com.vitochianese.configmanager.repository;
 import com.vitochianese.configmanager.model.Configuration;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class InMemoryConfigurationRepository implements ConfigurationRepository {
@@ -16,5 +17,10 @@ public class InMemoryConfigurationRepository implements ConfigurationRepository 
     @Override
     public Configuration findByName(String name) {
         return storage.get(name);
+    }
+
+    @Override
+    public List<Configuration> findAllConfigurations() {
+        return storage.values().stream().toList();
     }
 }
