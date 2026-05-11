@@ -6,18 +6,21 @@ import com.vitochianese.configmanager.model.Configuration;
 import com.vitochianese.configmanager.model.ConfigurationVersion;
 import com.vitochianese.configmanager.service.ConfigurationService;
 
+import java.io.IOException;
+
 public class Main {
     public static void main(String[] args)  {
 //        ConfigurationRepository repository = new InMemoryConfigurationRepository();
 //        Configuration configuration = new Configuration("database-config"),
 //                      configuration1 = new Configuration("application-config");
-        ConfigurationService service = new ConfigurationService();
-        service.createConfiguration("database-config");
-        service.createConfiguration("application-config");
 
         try{
-            Configuration configuration = service.getRepository().findByName("database-config"),
-                    configuration1 = service.getRepository().findByName("application-config");
+            ConfigurationService service = new ConfigurationService();
+            service.createConfiguration("database-config");
+            service.createConfiguration("application-config");
+
+            Configuration configuration = service.getConfigurationByName("database-config"),
+                          configuration1 = service.getConfigurationByName("application-config");
 
             service.addVersion(new ConfigurationVersion(1, "db.host=localhost"), configuration);
             service.addVersion(new ConfigurationVersion(2, "db.host=db.company.com"), configuration);
@@ -27,16 +30,22 @@ public class Main {
             service.addVersion(new ConfigurationVersion(2, "app.name=SmartApp"), configuration1);
             service.addVersion(new ConfigurationVersion(3, "app.name=IoTApp"), configuration1);
 
-            System.out.println(service.getVersions(configuration));
-            System.out.println(service.getVersions(configuration1));
+            service.save();
+
+            System.out.println("Repository: ");
+            System.out.println(service.getAllConfigurations());
 
             service.rollbackVersion(new ConfigurationVersion(1, "db.host=localhost"), configuration);
             service.rollbackVersion(new ConfigurationVersion(2, "app.name=SmartApp"), configuration1);
 
-            System.out.println(service.getVersions(configuration));
-            System.out.println(service.getVersions(configuration1));
+            System.out.println("Repository: ");
+            System.out.println(service.getAllConfigurations());
+
+
         }catch (ConfigurationNotFoundException e) {
             System.out.println(e.getMessage());
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
 
 
