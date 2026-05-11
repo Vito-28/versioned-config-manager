@@ -2,6 +2,7 @@ package com.vitochianese.configmanager.model;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class Configuration {
     private String name;
@@ -38,6 +39,19 @@ public class Configuration {
 
     public void setVersions(List<ConfigurationVersion> versions) {
         this.versions = versions;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Configuration that = (Configuration) o;
+        return Objects.equals(name, that.name) && Objects.equals(versions, that.versions);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, versions);
     }
 
     @Override
